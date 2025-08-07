@@ -1,0 +1,93 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef5f9; /* Um azul bem claro de fundo */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+}
+
+h1 {
+    color: #0c4a6e; /* Azul escuro */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Agrupamento de label e input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilo para os campos de texto e menus */
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #0c4a6e;
+    box-shadow: 0 0 0 3px rgba(12, 74, 110, 0.1);
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0c4a6e; /* Azul escuro */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #073451; /* Azul mais escuro */
+    transform: translateY(-2px);
+}
+
+/* Classe para esconder o container das aulas */
+.hidden {
+    display: none;
+}

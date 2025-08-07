@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Aulas Práticas</title>
+    
+    <!-- Link para a folha de estilos CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Link para o script JavaScript (com 'defer' para carregar após o HTML) -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Agendamento de Aulas</h1>
+        <p>Preencha seus dados e escolha uma aula prática disponível para o seu curso.</p>
+
+        <form id="agendamento-form">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Institucional</label>
+                <input type="email" id="email" name="email" placeholder="seu.nome@a.fecaf.com.br" required>
+            </div>
+
+            <div class="input-group">
+                <label for="curso">Selecione seu Curso</label>
+                <select id="curso" name="curso" required>
+                    <option value="">-- Por favor, escolha um curso --</option>
+                    <option value="Biomedicina">Biomedicina</option>
+                    <option value="Farmácia">Farmácia</option>
+                    <option value="Educação-Física">Educação Física</option>
+                    <option value="Estética">Estética</option>
+                    <option value="Físio-Terapia">Fisioterapia</option>
+                    <option value="Nutrição">Nutrição</option>
+                    <option value="Radiologia">Radiologia</option>
+                    <option value="Terapia-Ocupacional">Terapia Ocupacional</option>
+                </select>
+            </div>
+
+            <!-- Este container aparecerá dinamicamente -->
+            <div id="aulas-container" class="input-group hidden">
+                <label for="aula-pratica">Aulas Práticas Disponíveis</label>
+                <!-- LINHA CORRIGIDA -->
+                    <select id="aula-pratica" name="aulapratica" required>
+                    <!-- Opções serão inseridas pelo JavaScript -->
+                </select>
+            </div>
+
+            <button type="submit">Agendar Aula</button>
+        </form>
+    </div>
+
+</body>
+</html>
