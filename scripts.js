@@ -1,203 +1,224 @@
-// Dados das aulas e seletores de elementos (sem alterações aqui)
-const aulasDisponiveis = {
-    'Biomedicina': [
-        '11/08 - Anatomia palpatória',
-        '18/08 - Oficina de massinha - Tipos celulares',
-        '18/08 - Genética Clínica: Síndromes Genéticas com Modelos Visuais',
-        '18/08 - Peeling',
-        '18/08 - PEIM',
-        '23/08 - Oficina de massinha - Tipos celulares',
-        '23/08 - Peeling',
-        '25/08 - Morfofisiologia celular - células sanguíneas e elementos figurados',
-        '06/09 - Genética Clínica: Síndromes Genéticas com Modelos Visuais',
-        '06/09 - PEIM',
-        '08/09 - Análise e Tecnologia de Alimentos',
-        '13/09 - Morfofisiologia celular - células sanguíneas e elementos figurados',
-        '15/09 - Preparação de esfregaço e coloração de GRAM',
-        '22/09 - Plaqueamento de Bactérias',
-        '22/09 - Capilar',
-        '27/09 - Análise e Tecnologia de Alimentos',
-        '29/09 - Contagem de Hemácias e Leucócitos',
-        '04/10 - Preparação de esfregaço e coloração de GRAM',
-        '06/10 - Mitose e Variedade Celular Humana',
-        '06/10 - Fisiologia do Pâncreas Endócrino',
-        '11/10 - Plaqueamento de Bactérias',
-        '11/10 - Capilar',
-        '13/10 - Preparo e Diluição de Soluções',
-        '13/10 - Urinálise por fita Reagente',
-        '18/10 - Contagem de Hemácias e Leucócitos',
-        '20/10 - Imunoensaios',
-        '25/10 - Mitose e Variedade Celular Humana',
-        '25/10 - Fisiologia do Pâncreas Endócrino',
-        '01/11 - Preparo e Diluição de Soluções',
-        '01/11 - Urinálise por fita Reagente',
-        '08/11 - Imunoensaios',
-        '10/11 - Coleta, esfregaço e coloração',
-        '10/11 - Método de Hoffman e Willis',
-        '17/11 - Extração de DNA da Mucosa Oral',
-        '29/11 - Coleta, esfregaço e coloração',
-        '29/11 - Método de Hoffman e Willis',
-        '06/12 - Extração de DNA da Mucosa Oral'
-    ],
-    'Farmácia': [
-        '11/08 - Anatomia palpatória',
-        '16/08 - Anatomia palpatória',
-        '18/08 - Oficina de massinha - Tipos celulares',
-        '18/08 - Genética Clínica: Síndromes Genéticas com Modelos Visuais',
-        '23/08 - Oficina de massinha - Tipos celulares',
-        '25/08 - Morfofisiologia celular - células sanguíneas e elementos figurados',
-        '06/09 - Genética Clínica: Síndromes Genéticas com Modelos Visuais',
-        '08/09 - Análise e Tecnologia de Alimentos',
-        '13/09 - Morfofisiologia celular - células sanguíneas e elementos figurados',
-        '15/09 - Preparação de esfregaço e coloração de GRAM',
-        '22/09 - Plaqueamento de Bactérias',
-        '27/09 - Análise e Tecnologia de Alimentos',
-        '29/09 - Contagem de Hemácias e Leucócitos',
-        '04/10 - Preparação de esfregaço e coloração de GRAM',
-        '06/10 - Mitose e Variedade Celular Humana',
-        '06/10 - Fisiologia do Pâncreas Endócrino',
-        '11/10 - Plaqueamento de Bactérias',
-        '13/10 - Preparo e Diluição de Soluções',
-        '13/10 - Urinálise por fita Reagente',
-        '18/10 - Contagem de Hemácias e Leucócitos',
-        '20/10 - Imunoensaios',
-        '25/10 - Mitose e Variedade Celular Humana',
-        '25/10 - Fisiologia do Pâncreas Endócrino',
-        '01/11 - Preparo e Diluição de Soluções',
-        '01/11 - Urinálise por fita Reagente',
-        '08/11 - Imunoensaios',
-        '10/11 - Coleta, esfregaço e coloração',
-        '10/11 - Método de Hoffman e Willis',
-        '17/11 - Extração de DNA da Mucosa Oral',
-        '29/11 - Coleta, esfregaço e coloração',
-        '29/11 - Método de Hoffman e Willis',
-        '06/12 - Extração de DNA da Mucosa Oral'
-    ],
+// 1. ESTRUTURA DE DADOS COMPLETA E CORRIGIDA
+const dadosCursos = {
+    // --- CURSOS COM A NOVA LÓGICA DE SEMESTRE ---
+    'Biomedicina': {
+        '1º Semestre': [{ aula: 'Extração de DNA da mucosa oral', data: '06/12/25' }],
+        '2º Semestre': [
+            { aula: 'Genética Clínica: Síndromes Genéticas com Modelos Visuais', data: '06/09/25' },
+            { aula: 'Mitose e Variedade Celular', data: '25/10/25' },
+            { aula: 'Preparo e diluição de soluções', data: '01/11/25' }
+        ],
+        '3º Semestre': [
+            { aula: 'Anatomia palpatória', data: '16/08/25' },
+            { aula: 'Fisiologia do Pâncreas endócrino', data: '25/10/25' },
+            { aula: 'Urinálise por fita reagente e visualização de elementos figurados', data: '01/11/25' }
+        ],
+        '4º Semestre': [
+            { aula: 'Oficina de massinha - Tipos celulares', data: '23/08/25' },
+            { aula: 'Morfofisiologia celular - células sanguíneas e elementos figurados', data: '13/09/25' },
+            { aula: 'Método de Hoffman e método de Willis', data: '29/11/25' },
+            { aula: 'Coleta, Preparação de esfregaço e coloração de lâminas', data: '29/11/25' },
+            { aula: 'Preparação de esfregaço e coloração e Coloração de Gram', data: '04/10/25' }
+        ],
+        '5º Semestre': [
+            { aula: 'Plaqueamento de Bacterias', data: '11/10/25' },
+            { aula: 'Morfofisiologia celular - células sanguíneas e elementos figurados', data: '13/09/25' },
+            { aula: 'Coleta, esfregaço e coloração de lâminas', data: '29/11/25' },
+            { aula: 'Imunoensaios', data: '08/11/25' }
+        ],
+        '6º Semestre': [
+            { aula: 'Análise e tecnologia de alimentos', data: '27/09/25' },
+            { aula: 'Contagem de hemácias e leucócitos na câmera de Newbauer', data: '18/10/25' }
+        ],
+        '7º Semestre': [
+            { aula: 'Peeling', data: '23/08/25' },
+            { aula: 'Análise e tecnologia de Alimentos', data: '27/09/25' }
+        ],
+        '8º Semestre': [
+            { aula: 'PEIM', data: '06/09/25' },
+            { aula: 'Capilar', data: '11/10/25' }
+        ]
+    },
+    'Farmácia': {
+        '1º Semestre': [{ aula: 'Extração de DNA da mucosa oral', data: '06/12/25' }],
+        '2º Semestre': [
+            { aula: 'Genética Clínica: Síndromes Genéticas com Modelos Visuais', data: '06/09/25' },
+            { aula: 'Mitose e Variedade Celular', data: '25/10/25' },
+            { aula: 'Preparo e diluição de soluções', data: '01/11/25' }
+        ],
+        '3º Semestre': [
+            { aula: 'Anatomia palpatória', data: '16/08/25' },
+            { aula: 'Fisiologia do Pâncreas endócrino', data: '25/10/25' },
+            { aula: 'Método de Hoffman e método de Willis', data: '29/11/25' }
+        ],
+        '4º Semestre': [
+            { aula: 'Oficina de massinha - Tipos celulares', data: '23/08/25' },
+            { aula: 'Morfofisiologia celular - células sanguíneas e elementos figurados', data: '13/09/25' },
+            { aula: 'Urinálise por fita reagente e visualização de elementos figurados', data: '01/11/25' },
+            { aula: 'Coleta, Preparação de esfregaço e coloração de lâminas', data: '29/11/25' },
+            { aula: 'Preparação de esfregaço e coloração e Coloração de Gram', data: '04/10/25' }
+        ],
+        '5º Semestre': [
+            { aula: 'Plaqueamento de Bacterias', data: '11/10/25' },
+            { aula: 'Morfofisiologia celular - células sanguíneas e elementos figurados', data: '13/09/25' },
+            { aula: 'Coleta, esfregaço e coloração de lâminas', data: '29/11/25' },
+            { aula: 'Imunoensaios', data: '08/11/25' }
+        ],
+        '6º Semestre': [
+            { aula: 'Análise e tecnologia de alimentos', data: '27/09/25' },
+            { aula: 'Contagem de hemácias e leucócitos na câmera de Newbauer', data: '18/10/25' }
+        ],
+        '7º Semestre': [{ aula: 'Coleta, esfregaço e coloração de lâminas', data: '29/11/25' }],
+        '8º Semestre': [{ aula: 'Contagem de hemácias e leucócitos na câmera de Newbauer', data: '18/10/25' }]
+    },
+    'Fisioterapia': {
+        '2º Semestre': [
+            { aula: 'Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física', data: '01/11/25' },
+            { aula: 'Anatomia Humana', data: '30/08/25' }
+        ],
+        '3º Semestre': [{ aula: 'Estudo Prático da Biomecânica e Cinesiologia dos Membros', data: '30/08/25' }],
+        '4º Semestre': [
+            { aula: 'Primeiros socorros (Procedimentos de emergência)', data: '20/09/25' },
+            { aula: 'Avaliação e Diagnóstico Cinético-Funcional com Ênfase em Membros e Coluna', data: '06/12/25' }
+        ]
+    },
+    'Nutrição': {
+        '2º Semestre': [{ aula: 'Rotulagem de Alimentos - Açúcar Adicionado', data: '16/08/25' }],
+        '3º Semestre': [{ aula: 'Rotulagem de Alimentos - Gordura saturada', data: '30/08/25' }],
+        '4º Semestre': [{ aula: 'Rotulagem de Alimentos - Sódio', data: '13/09/25' }],
+        '5º Semestre': [{ aula: 'Avaliação Antropométrica', data: '11/10/25' }],
+        '6º Semestre': [{ aula: 'Avaliação Antropométrica em crianças', data: '18/10/25' }]
+    },
+
+    // --- CURSOS COM A LÓGICA ANTIGA (SEM SEMESTRE) ---
     'Educação-Física': [
-        '23/08 - Esportes Coletivos: Voleibol',
-        '27/09 - Manifestações Culturais, Rítmicas e Expressivas',
-        '25/10 - Desenvolvimento e Aprendizagem Motora',
-        '25/10 - Cinesiologia e Biomecânica',
-        '29/11 - Treinamentos Resistido e Funcional',
-        '13/12 - Tendências de Atividades de Academias e Clubes'
+        { aula: 'Esportes Coletivos: Voleibol', data: '23/08/25' },
+        { aula: 'Manifestações Culturais, Rítmicas e Expressivas', data: '27/09/25' },
+        { aula: 'Desenvolvimento e Aprendizagem Motora', data: '25/10/25' },
+        { aula: 'Cinesiologia e Biomecânica', data: '25/10/25' },
+        { aula: 'Treinamentos Resistido e Funcional', data: '29/11/25' },
+        { aula: 'Tendências de Atividades de Academias e Clubes', data: '13/12/25' }
     ],
     'Estética': [
-        '04/08 - Técnicas em Design de Sobrancelha',
-        '11/08 - Técnicas em Design de Sobrancelha',
-        '25/08 - Técnicas em Design de Sobrancelha',
-        '01/09 - Técnica em Nutrição em Estética',
-        '08/09 - Técnicas em Design de Sobrancelha',
-        '15/09 - Técnicas de Maquiagem e Visagismo',
-        '22/09 - Técnica em Nutrição em Estética',
-        '29/09 - Recursos Manuais e Técnicas de Massagem',
-        '06/10 - Técnicas de Maquiagem e Visagismo',
-        '13/10 - Recursos Manuais e Técnicas de Massagem',
-        '20/10 - Recursos Manuais e Técnicas de Massagem',
-        '03/11 - Recursos Manuais e Técnicas de Massagem'
-    ],
-    'Físio-Terapia': [
-        '25/08 - Anatomia Humana',
-        '25/08 - Estudo Prático da Biomecânica e Cinesiologia dos Membros',
-        '30/08 - Anatomia Humana',
-        '30/08 - Estudo Prático da Biomecânica e Cinesiologia dos Membros',
-        '01/09 - Primeiros Socorros (Procedimentos de emergência)',
-        '20/09 - Primeiros Socorros (Procedimentos de emergência)',
-        '14/10 - Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física',
-        '01/11 - Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física',
-        '17/11 - Avaliação e Diagnóstico Cinético-Funcional com Ênfase em Membros e Coluna',
-        '22/11 - Biofeedback e Respostas Fisiológicas ao Estresse Ocupacional',
-        '06/12 - Avaliação e Diagnóstico Cinético-Funcional com Ênfase em Membros e Coluna'
-    ],
-    'Nutrição': [
-        '11/08 - Rotulagem de Alimentos',
-        '16/08 - Rotulagem de Alimentos: Açúcar Adicionado',
-        '25/08 - Rotulagem de Alimentos: Gordura Saturada',
-        '25/08 - Rotulagem de Alimentos de Sódio',
-        '30/08 - Rotulagem de Alimentos: Gordura Saturada',
-        '13/09 - Rotulagem de Alimentos de Sódio',
-        '22/09 - Avaliação Antropométrica',
-        '29/09 - Avaliação Antropométrica Infantil',
-        '11/10 - Avaliação Antropométrica',
-        '18/10 - Avaliação Antropométrica Infantil'
+        { aula: 'Técnicas em Design de Sobrancelha', data: '04/08/25' },
+        { aula: 'Técnicas em Design de Sobrancelha', data: '11/08/25' },
+        { aula: 'Técnicas em Design de Sobrancelha', data: '25/08/25' },
+        { aula: 'Técnica em Nutrição em Estética', data: '01/09/25' },
+        { aula: 'Técnicas em Design de Sobrancelha', data: '08/09/25' },
+        { aula: 'Técnicas de Maquiagem e Visagismo', data: '15/09/25' },
+        { aula: 'Técnica em Nutrição em Estética', data: '22/09/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '29/09/25' },
+        { aula: 'Técnicas de Maquiagem e Visagismo', data: '06/10/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '13/10/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '20/10/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '03/11/25' }
     ],
     'Radiologia': [
-        '25/08 - Prática Laboratorial de Anatomia',
-        '25/08 - ALIZA',
-        '01/09 - E-CONTOUR',
-        '20/09 - Anatomia de Hipofracionamento Prostático',
-        '18/10 - Prática Laboratorial de Anatomia',
-        '08/11 - Delineamento e Anatomia de região Cabeça/Pescoço',
-        '22/11 - Anatomia Radiológica',
-        '06/12 - Delineamento e Anatomia Mamária',
-        '13/12 - Imagens de Radiologia Digital - ALIZA'
+        { aula: 'Prática Laboratorial de Anatomia', data: '25/08/25' },
+        { aula: 'ALIZA', data: '25/08/25' },
+        { aula: 'E-CONTOUR', data: '01/09/25' },
+        { aula: 'Anatomia de Hipofracionamento Prostático', data: '20/09/25' },
+        { aula: 'Prática Laboratorial de Anatomia', data: '18/10/25' },
+        { aula: 'Delineamento e Anatomia de região Cabeça/Pescoço', data: '08/11/25' },
+        { aula: 'Anatomia Radiológica', data: '22/11/25' },
+        { aula: 'Delineamento e Anatomia Mamária', data: '06/12/25' },
+        { aula: 'Imagens de Radiologia Digital - ALIZA', data: '13/12/25' }
     ],
     'Terapia-Ocupacional': [
-        '25/08 - Anatomia Humana',
-        '25/08 - Estudo Prático da Biomecânica e Cinesiologia dos Membros',
-        '30/08 - Anatomia Humana',
-        '30/08 - Estudo Prático da Biomecânica e Cinesiologia dos Membros',
-        '08/09 - Coordenação Motora Fina e Grossa em Atividades Funcionais',
-        '27/09 - Coordenação Motora Fina e Grossa em Atividades Funcionais',
-        '03/11 - Biofeedback e Respostas Fisiológicas ao Estresse Ocupacional',
-        '17/11 - Análise Funcional da Preensão e Manipulação',
-        '24/11 - Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física',
-        '06/12 - Análise Funcional da Preensão e Manipulação',
-        '13/12 - Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física'
+        { aula: 'Anatomia Humana', data: '25/08/25' },
+        { aula: 'Estudo Prático da Biomecânica e Cinesiologia dos Membros', data: '25/08/25' },
+        { aula: 'Anatomia Humana', data: '30/08/25' },
+        { aula: 'Estudo Prático da Biomecânica e Cinesiologia dos Membros', data: '30/08/25' },
+        { aula: 'Coordenação Motora Fina e Grossa em Atividades Funcionais', data: '08/09/25' },
+        { aula: 'Coordenação Motora Fina e Grossa em Atividades Funcionais', data: '27/09/25' },
+        { aula: 'Biofeedback e Respostas Fisiológicas ao Estresse Ocupacional', data: '03/11/25' },
+        { aula: 'Análise Funcional da Preensão e Manipulação', data: '17/11/25' },
+        { aula: 'Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física', data: '24/11/25' },
+        { aula: 'Análise Funcional da Preensão e Manipulação', data: '06/12/25' },
+        { aula: 'Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física', data: '13/12/25' }
     ]
 };
+
+// 2. SELETORES DE ELEMENTOS
 const cursoSelect = document.getElementById('curso');
+const semestreContainer = document.getElementById('semestre-container');
+const semestreSelect = document.getElementById('semestre');
 const aulasContainer = document.getElementById('aulas-container');
 const aulasSelect = document.getElementById('aula-pratica');
 const form = document.getElementById('agendamento-form');
-const submitButton = form.querySelector('button');
 
-// Lógica para mostrar/esconder o menu (sem alterações aqui)
+// Função para resetar e esconder campos
+function resetFields(...fields) {
+    fields.forEach(field => {
+        field.container.classList.add('hidden');
+        field.select.innerHTML = '';
+    });
+}
+
+// 3. LÓGICA DE EVENTOS FLEXÍVEL
 cursoSelect.addEventListener('change', function() {
     const cursoSelecionado = this.value;
-    aulasSelect.innerHTML = '';
-    if (cursoSelecionado) {
-        aulasContainer.classList.remove('hidden');
-        const defaultOption = document.createElement('option');
-        defaultOption.value = '';
-        defaultOption.textContent = '-- Selecione a aula --';
-        aulasSelect.appendChild(defaultOption);
-        const aulas = aulasDisponiveis[cursoSelecionado];
-        aulas.forEach(function(aula) {
-            const novaOpcao = document.createElement('option');
-            novaOpcao.textContent = aula;
-            novaOpcao.value = aula;
-            aulasSelect.appendChild(novaOpcao);
+    resetFields({ container: semestreContainer, select: semestreSelect }, { container: aulasContainer, select: aulasSelect });
+
+    if (!cursoSelecionado) return;
+
+    const dadosDoCurso = dadosCursos[cursoSelecionado];
+
+    if (dadosDoCurso && !Array.isArray(dadosDoCurso)) {
+        semestreContainer.classList.remove('hidden');
+        semestreSelect.innerHTML = '<option value="">-- Selecione o semestre --</option>';
+        Object.keys(dadosDoCurso).forEach(semestre => {
+            const option = document.createElement('option');
+            option.value = semestre;
+            option.textContent = semestre;
+            semestreSelect.appendChild(option);
         });
-    } else {
-        aulasContainer.classList.add('hidden');
+    } else if (dadosDoCurso && Array.isArray(dadosDoCurso)) {
+        aulasContainer.classList.remove('hidden');
+        aulasSelect.innerHTML = '<option value="">-- Selecione a aula --</option>';
+        dadosDoCurso.forEach(item => {
+            const option = document.createElement('option');
+            const textoOpcao = `${item.data} - ${item.aula}`;
+            option.value = textoOpcao;
+            option.textContent = textoOpcao;
+            aulasSelect.appendChild(option);
+        });
     }
 });
 
+semestreSelect.addEventListener('change', function() {
+    const cursoSelecionado = cursoSelect.value;
+    const semestreSelecionado = this.value;
 
+    resetFields({ container: aulasContainer, select: aulasSelect });
 
-// ===================================================================
-// AQUI ESTÁ A NOVA LÓGICA DE ENVIO ("CABEÇALHO DA INTEGRAÇÃO")
-// ===================================================================
+    if (!semestreSelecionado) return;
 
-// URL do seu script publicado. COLE O SEU URL AQUI!
+    const aulas = dadosCursos[cursoSelecionado][semestreSelecionado];
+    aulasContainer.classList.remove('hidden');
+    aulasSelect.innerHTML = '<option value="">-- Selecione a aula --</option>';
+
+    aulas.forEach(item => {
+        const option = document.createElement('option');
+        const textoOpcao = `${item.data} - ${item.aula}`;
+        option.value = textoOpcao;
+        option.textContent = textoOpcao;
+        aulasSelect.appendChild(option);
+    });
+});
+
+// 4. LÓGICA DE ENVIO
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxU15iteEM-eso_KwErAtzEi96uRHTC5X0G-DVj69Nl5xJEkFF4QZPfeLYHGs0M_2qQlA/exec";
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-
     const formData = new FormData(form);
-
-    // --- MUDANÇA PRINCIPAL AQUI ---
     
-    // 1. Mostra o feedback de sucesso IMEDIATAMENTE.
     alert('Agendamento recebido com sucesso! Estamos salvando seus dados.');
     
-    // 2. Limpa o formulário e o esconde para o usuário.
     form.reset();
-    aulasContainer.classList.add('hidden');
+    resetFields({ container: semestreContainer, select: semestreSelect }, { container: aulasContainer, select: aulasSelect });
     
-    // 3. Envia os dados para a planilha em segundo plano.
-    // O usuário não precisa mais esperar por isso.
     fetch(SCRIPT_URL, {
         method: 'POST',
         body: formData
@@ -205,17 +226,12 @@ form.addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(data => {
         if (data.result === 'success') {
-            // Sucesso! Os dados foram salvos. Logamos no console.
             console.log('Dados salvos na planilha com sucesso na linha:', data.row);
         } else {
-            // Falha. Logamos o erro para depuração.
             console.error('Erro ao salvar na planilha:', data.error);
-            // Em um app mais complexo, poderíamos salvar os dados no navegador
-            // e tentar enviar novamente mais tarde.
         }
     })
     .catch(error => {
-        // Falha de rede.
         console.error('Erro de rede ao enviar o formulário:', error);
     });
 });
