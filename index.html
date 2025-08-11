@@ -10,7 +10,7 @@
 <body>
 
     <div class="form-container">
-        <h1>Agendamento de Aulas Práticas - Sede</h1>
+        <h1>Agendamento de Aulas</h1>
         <p>Preencha seus dados e escolha uma aula prática disponível para o seu curso.</p>
 
         <form id="agendamento-form">
@@ -39,15 +39,16 @@
                 </select>
             </div>
 
-            <!-- NOVO CONTAINER PARA O SEMESTRE -->
+            <!-- Container do semestre -->
             <div id="semestre-container" class="input-group hidden">
                 <label for="semestre">Selecione o Semestre</label>
-                <select id="semestre" name="semestre" required>
+                <!-- O 'required' foi removido daqui e será controlado pelo JS -->
+                <select id="semestre" name="semestre">
                     <!-- Opções inseridas pelo JavaScript -->
                 </select>
             </div>
 
-            <!-- Container das aulas, agora depende do semestre -->
+            <!-- Container das aulas -->
             <div id="aulas-container" class="input-group hidden">
                 <label for="aula-pratica">Aulas Práticas Disponíveis</label>
                 <select id="aula-pratica" name="aulapratica" required>

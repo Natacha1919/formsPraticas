@@ -1,4 +1,4 @@
-// 1. ESTRUTURA DE DADOS COMPLETA E CORRIGIDA
+// 1. ESTRUTURA DE DADOS COMPLETA
 const dadosCursos = {
     // --- CURSOS COM A NOVA LÓGICA DE SEMESTRE ---
     'Biomedicina': {
@@ -155,25 +155,37 @@ function resetFields(...fields) {
     });
 }
 
-// 3. LÓGICA DE EVENTOS FLEXÍVEL
+// 3. LÓGICA DE EVENTOS CORRIGIDA
 cursoSelect.addEventListener('change', function() {
     const cursoSelecionado = this.value;
     resetFields({ container: semestreContainer, select: semestreSelect }, { container: aulasContainer, select: aulasSelect });
+
+    // --- CORREÇÃO APLICADA ---
+    // Garante que o campo de semestre NUNCA seja obrigatório por padrão
+    semestreSelect.required = false;
 
     if (!cursoSelecionado) return;
 
     const dadosDoCurso = dadosCursos[cursoSelecionado];
 
+    // Se o curso tem semestres (é um objeto, não um array)
     if (dadosDoCurso && !Array.isArray(dadosDoCurso)) {
         semestreContainer.classList.remove('hidden');
         semestreSelect.innerHTML = '<option value="">-- Selecione o semestre --</option>';
+        
+        // TORNA O CAMPO OBRIGATÓRIO APENAS QUANDO VISÍVEL
+        semestreSelect.required = true;
+        
         Object.keys(dadosDoCurso).forEach(semestre => {
             const option = document.createElement('option');
             option.value = semestre;
             option.textContent = semestre;
             semestreSelect.appendChild(option);
         });
-    } else if (dadosDoCurso && Array.isArray(dadosDoCurso)) {
+    } 
+    // Se o curso NÃO tem semestres (é um array)
+    else if (dadosDoCurso && Array.isArray(dadosDoCurso)) {
+        // O campo semestre permanece escondido e não-obrigatório
         aulasContainer.classList.remove('hidden');
         aulasSelect.innerHTML = '<option value="">-- Selecione a aula --</option>';
         dadosDoCurso.forEach(item => {
@@ -208,7 +220,7 @@ semestreSelect.addEventListener('change', function() {
 });
 
 // 4. LÓGICA DE ENVIO
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxU15iteEM-eso_KwErAtzEi96uRHTC5X0G-DVj69Nl5xJEkFF4QZPfeLYHGs0M_2qQlA/exec";
+const SCRIPT_URL = "COLOQUE_SEU_URL_DO_APPS_SCRIPT_AQUI"; // <-- NÃO ESQUEÇA DE COLOCAR SEU URL!
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
