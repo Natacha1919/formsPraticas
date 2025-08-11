@@ -220,7 +220,7 @@ semestreSelect.addEventListener('change', function() {
 });
 
 // 4. LÓGICA DE ENVIO
-const SCRIPT_URL = "COLOQUE_SEU_URL_DO_APPS_SCRIPT_AQUI"; // <-- NÃO ESQUEÇA DE COLOCAR SEU URL!
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxU15iteEM-eso_KwErAtzEi96uRHTC5X0G-DVj69Nl5xJEkFF4QZPfeLYHGs0M_2qQlA/exec"; // <-- NÃO ESQUEÇA DE COLOCAR SEU URL!
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
