@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento de Aulas Práticas</title>
+    
+    <!-- Link para a folha de estilos CSS -->
     <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Link para o script JavaScript (com 'defer' para carregar após o HTML) -->
     <script src="scripts.js" defer></script>
 </head>
 <body>
@@ -21,7 +25,7 @@
 
             <div class="input-group">
                 <label for="email">Email Institucional</label>
-                <input type="email" id="email" name="email" placeholder="seu.nome@instituicao.edu.br" required>
+                <input type="email" id="email" name="email" placeholder="seu.nome@a.fecaf.com.br" required>
             </div>
 
             <div class="input-group">
@@ -30,29 +34,21 @@
                     <option value="">-- Por favor, escolha um curso --</option>
                     <option value="Biomedicina">Biomedicina</option>
                     <option value="Farmácia">Farmácia</option>
-                    <option value="Fisioterapia">Fisioterapia</option>
-                    <option value="Nutrição">Nutrição</option>
                     <option value="Educação-Física">Educação Física</option>
                     <option value="Estética">Estética</option>
+                    <option value="Físio-Terapia">Fisioterapia</option>
+                    <option value="Nutrição">Nutrição</option>
                     <option value="Radiologia">Radiologia</option>
                     <option value="Terapia-Ocupacional">Terapia Ocupacional</option>
                 </select>
             </div>
 
-            <!-- Container do semestre -->
-            <div id="semestre-container" class="input-group hidden">
-                <label for="semestre">Selecione o Semestre</label>
-                <!-- O 'required' foi removido daqui e será controlado pelo JS -->
-                <select id="semestre" name="semestre">
-                    <!-- Opções inseridas pelo JavaScript -->
-                </select>
-            </div>
-
-            <!-- Container das aulas -->
+            <!-- Este container aparecerá dinamicamente -->
             <div id="aulas-container" class="input-group hidden">
                 <label for="aula-pratica">Aulas Práticas Disponíveis</label>
-                <select id="aula-pratica" name="aulapratica" required>
-                    <!-- Opções inseridas pelo JavaScript -->
+                <!-- LINHA CORRIGIDA -->
+                    <select id="aula-pratica" name="aulapratica" required>
+                    <!-- Opções serão inseridas pelo JavaScript -->
                 </select>
             </div>
 
