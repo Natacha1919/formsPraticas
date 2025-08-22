@@ -100,18 +100,12 @@ const dadosCursos = {
         { aula: 'Tendências de Atividades de Academias e Clubes', data: '13/12/25' }
     ],
     'Estética': [
-        { aula: 'Técnicas em Design de Sobrancelha', data: '04/08/25' },
-        { aula: 'Técnicas em Design de Sobrancelha', data: '11/08/25' },
-        { aula: 'Técnicas em Design de Sobrancelha', data: '25/08/25' },
-        { aula: 'Técnica em Nutrição em Estética', data: '01/09/25' },
-        { aula: 'Técnicas em Design de Sobrancelha', data: '08/09/25' },
-        { aula: 'Técnicas de Maquiagem e Visagismo', data: '15/09/25' },
+        { aula: 'Técnicas em Design de Sobrancelha 1', data: '11/08/25' },
+        { aula: 'Técnicas em Design de Sobrancelha 2', data: '08/09/25' },
         { aula: 'Técnica em Nutrição em Estética', data: '22/09/25' },
-        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '29/09/25' },
-        { aula: 'Técnicas de Maquiagem e Visagismo', data: '06/10/25' },
-        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '13/10/25' },
-        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '20/10/25' },
-        { aula: 'Recursos Manuais e Técnicas de Massagem', data: '03/11/25' }
+        { aula: 'Técnicas de Maquiagem e Visagismo e embelezamento', data: '06/10/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem 1', data: '20/10/25' },
+        { aula: 'Recursos Manuais e Técnicas de Massagem 2', data: '03/11/25' }
     ],
     'Radiologia': [
         { aula: 'Anatomia de Hipofracionamento Prostático', data: '20/09/25' },
@@ -240,3 +234,4 @@ form.addEventListener('submit', function(event) {
     });
 
 });
+
