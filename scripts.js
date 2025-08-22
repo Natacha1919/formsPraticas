@@ -122,15 +122,10 @@ const dadosCursos = {
         { aula: 'Delineamento e Anatomia mamária', data: '06/12/25' },
     ],
     'Terapia-Ocupacional': [
-        { aula: 'Anatomia Humana', data: '25/08/25' },
-        { aula: 'Estudo Prático da Biomecânica e Cinesiologia dos Membros', data: '25/08/25' },
         { aula: 'Anatomia Humana', data: '30/08/25' },
         { aula: 'Estudo Prático da Biomecânica e Cinesiologia dos Membros', data: '30/08/25' },
-        { aula: 'Coordenação Motora Fina e Grossa em Atividades Funcionais', data: '08/09/25' },
         { aula: 'Coordenação Motora Fina e Grossa em Atividades Funcionais', data: '27/09/25' },
-        { aula: 'Biofeedback e Respostas Fisiológicas ao Estresse Ocupacional', data: '03/11/25' },
-        { aula: 'Análise Funcional da Preensão e Manipulação', data: '17/11/25' },
-        { aula: 'Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física', data: '24/11/25' },
+        { aula: 'Biofeedback e Respostas Fisiológicas ao Estresse Ocupacional', data: '22/11/25' },
         { aula: 'Análise Funcional da Preensão e Manipulação', data: '06/12/25' },
         { aula: 'Prática de Avaliação da Pressão Arterial Sistêmica em Repouso e Durante Atividade Física', data: '13/12/25' }
     ]
@@ -243,4 +238,5 @@ form.addEventListener('submit', function(event) {
     .catch(error => {
         console.error('Erro de rede ao enviar o formulário:', error);
     });
+
 });
