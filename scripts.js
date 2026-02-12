@@ -125,7 +125,7 @@ const dadosCursos = {
             { aula: 'Recursos Manuais e Técnicas de Massagem (Aula 2)', data: '15/06/26 - 19h00 às 22h00' }
         ],
         '3º Semestre': [
-            { aula: 'Procedimentos em Estética Corporal (Aula 1)', data: '22/03/26 - 19h00 às 22h00' },
+            { aula: 'Procedimentos em Estética Corporal (Aula 1)', data: '23/03/26 - 19h00 às 22h00' },
             { aula: 'Procedimentos em Estética Facial (Aula 1)', data: '11/05/26 - 19h00 às 22h00' },
             { aula: 'Procedimentos em Estética Corporal (Aula 2)', data: '13/04/26 - 19h00 às 22h00' },
             { aula: 'Procedimentos em Estética Facial (Aula 2)', data: '18/05/26 - 19h00 às 22h00' }
