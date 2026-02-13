@@ -111,6 +111,10 @@ const dadosCursos = {
         '5º Semestre': [
             { aula: 'Oficinas Terapêuticas com Recursos de Baixo Custo', data: '25/04/26 - 09h00 às 12h00' },
             { aula: 'Estimulação Sensorial Multimodal em Diferentes Perfis Funcionais', data: '13/06/26 - 09h00 às 12h00' }
+        ],
+        '6º Semestre': [
+            { aula: 'Adaptação de Atividades para Alunos com Deficiência', data: '16/05/26 - 13h00 às 16h00' },
+            { aula: 'Confecção de Órteses Simples de Mão e Punho', data: '20/06/26 - 09h00 às 12h00' }
         ]
     },
     'Estética-Cosmética': {
